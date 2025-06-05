@@ -7,8 +7,8 @@ import os
 st.set_page_config(page_title="AI Patient Intake", layout="centered")
 st.title("🩺 AI Patient Intake Assistant")
 
-# Get API Key from environment
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# ✅ Get API Key from Streamlit Secrets
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # Basic patient info fields
 questions = [
